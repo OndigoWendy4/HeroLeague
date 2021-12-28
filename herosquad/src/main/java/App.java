@@ -30,13 +30,13 @@ public class App {
         staticFileLocation("/public");
 
 //local
-     //   String connectionString = "jdbc:postgresql://localhost:5432/herosquad";
-   //   Sql2o sql2o = new Sql2o(connectionString, "moringa", "Access1");
+       String connectionString = "jdbc:postgresql://localhost:5432/herosquad";
+     Sql2o sql2o = new Sql2o(connectionString, "postgres", "wendy1");
 //heroku
        //String connectionString = "jdbc:postgresql://zjaanpjcapxdwn:e4ffa8fce21be355c5a7f8d6665bb1791c5bc4df6bc1398a6e0767f8fc0f9375@ec2-50-17-255-244.compute-1.amazonaws.com:5432/ddr38cjsfgt0uq";
        //  String connectionString = "jdbc:postgresql://ec2-50-17-255-244.compute-1.amazonaws.com:5432/ddr38cjsfgt0uq";
      // Sql2o sql2o = new Sql2o(connectionString, "zjaanpjcapxdwn","e4ffa8fce21be355c5a7f8d6665bb1791c5bc4df6bc1398a6e0767f8fc0f9375");
-        Sql2o sql2o = new Sql2o("jdbc:postgresql://ec2-50-17-255-244.compute-1.amazonaws.com:5432/ddr38cjsfgt0uq?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory", "zjaanpjcapxdwn","e4ffa8fce21be355c5a7f8d6665bb1791c5bc4df6bc1398a6e0767f8fc0f9375");
+      //  Sql2o sql2o = new Sql2o("jdbc:postgresql://ec2-50-17-255-244.compute-1.amazonaws.com:5432/ddr38cjsfgt0uq?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory", "zjaanpjcapxdwn","e4ffa8fce21be355c5a7f8d6665bb1791c5bc4df6bc1398a6e0767f8fc0f9375");
         Sql2oHeroDao heroDao = new Sql2oHeroDao(sql2o);
         Sql2oSquadDao squadDao = new Sql2oSquadDao(sql2o);
 
